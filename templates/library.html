@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Library</title>
+<link rel="stylesheet" type="text/css" href="/static/css/styles1.css">
+
+   </head>
+<body>
+<div class="htmleaf-container">
+	<div class="wrapper">
+		<div class="container">
+            <form action="/" method="post">
+                <button type="submit" name="add">Add Bood</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input type="text" name = "author" placeholder="Input The Name">
+				<button type="submit" name="search">Search</button>
+			</form>
+
+            <table class="datalist">
+                <tr>
+                    <th scope="col">ISBN</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">AuthorID</th>
+                    <th scope="col">Publisher</th>
+                    <th scope="col">PublishDate</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Updata</th>
+                </tr>
+                {% for book_dict in book_lists %}
+                    <tr>
+                        <td>{{ book_dict.ISBN }}</td>
+                        <td>
+                            <form style="padding: 0 0;">
+                                <a href="/author/?id={{ book_dict.id }}">{{ book_dict.Title }}</a>
+			                </form>
+                        </td>
+                        <td>{{ book_dict.AuthorID }}</td>
+                        <td>{{ book_dict.Publisher }}</td>
+                        <td nowrap style="white-space:nowrap;word-break:nowrap">{{ book_dict.PublishDate }}</td>
+                        <td>{{ book_dict.Price }}</td>
+                        <td>
+                            <form style="padding: 0 0;">
+                                <a href="/delete/?id={{ book_dict.id }}">delete</a>
+			                </form>
+                        </td>
+                        <td>
+                            <form style="padding: 0 0;">
+                                <a href="/updata/?id={{ book_dict.id }}">updata</a>
+			                </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        <ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+            <br>
+            <form style="padding: 0 0;">
+                <a href = "?up=1">Last Page</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href = "?up=2">Next Page</a>
+            </form>
+		</div>
+
+	</div>
+</div>
+
+</body>
+
+</html>
+
+

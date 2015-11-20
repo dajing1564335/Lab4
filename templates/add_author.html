@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Author</title>
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+<div class="htmleaf-container">
+	<div class="wrapper">
+		<div class="container">
+			<h1>This Is A New Author</h1>
+			
+			<form action="/" method="post">
+				AuthorID:<input type="text" name="AuthorID" value="{{ AuthorID }}" onfocus="this.blur()">
+				Name:<input type="text" name="Name" placeholder="Name">
+                Age:<input type="text" name="Age" placeholder="Age">
+                Country:<input type="text" name="Country" placeholder="Country">
+				<br><button type="submit" name="author">OK</button>
+			</form>
+		</div>
+		
+		<ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

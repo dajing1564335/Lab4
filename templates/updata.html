@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updata</title>
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+<div class="htmleaf-container">
+	<div class="wrapper">
+		<div class="container">
+			<h1>Updata</h1>
+			
+			<form action="/" method="post">
+                <input type="hidden" name="id" value="{{ book_dict.id }}">
+				AuthorID:<input type="text" name="AuthorID" value="{{ book_dict.AuthorID }}">
+                Publisher:<input type="text" name="Publisher" value="{{ book_dict.Publisher }}">
+                PublishDate:<input type="text" name="PublishDate" value="{{ book_dict.PublishDate }}">
+                Price:<input type="text" name="Price" value="{{ book_dict.Price }}">
+                <br><button type="submit" name = "updata"> Updata </button>
+			</form>
+		</div>
+		
+		<ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
